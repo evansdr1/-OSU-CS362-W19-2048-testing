@@ -67,6 +67,13 @@ console.log('Inputed Key from user is: ' + map[event.which])
   this.bindButtonPress(".undo-button", this.undo);
   this.bindButtonPress(".keep-playing-button", this.keepPlaying);
 
+  //Dark theme toggle switch
+  document.getElementsByName("checkbox")[0].addEventListener( 'change', function () {
+
+   document.body.classList.toggle("dark-theme");
+
+  });
+
   // Respond to swipe events
   var touchStartClientX, touchStartClientY;
   var gameContainer = document.getElementsByClassName("game-container")[0];
